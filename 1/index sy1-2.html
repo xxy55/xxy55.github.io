@@ -14,8 +14,21 @@ body {
 </style>
 </head>
 <body>
-<h1 align="center">音乐欣赏</h1>
-	<p align="center"><img src="sources/QQ图片20210928122650.jpg"></p>
-	<bgsound src="xi.mp3"></bgsound>
+<h1 align="center">熊出没音乐欣赏</h1>
+	<p align="center"><img src="sources/QQ图片20210928122650.jpg">美腻的甘雨</p>
+	<audio src="sources/xi.mp3" controls="controls" preload id="music" hidden>
+    </audio>
+    <button id="a" onclick="a();">播放/暂停</button>
+    <script> 
+        function a(){
+          var audio = document.getElementById('music'); 
+          if(audio.paused){                 
+              audio.play();//audio.play();// 播放  
+          }
+          else{
+               audio.pause();// 暂停
+          } 
+        }
+     </script>
 </body>
 </html>
